@@ -31,7 +31,6 @@ body {
 /*Hidden widget on start*/
 
 #chat-widget {
-    display: none;
     position: fixed;
     bottom: 6.5rem;
     right: 2.5vw;
@@ -67,14 +66,17 @@ body {
 }
 
 #chat-input {
-    flex: 1;
-    border: none;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 0 0 0 1rem;
-    resize: none;
-    background: #282828;
-    color: #fff;
+  flex: 1;
+  border: 1px solid #2a2c34;
+  background: #15161a;
+  color: #eaeaea;
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  resize: none;        
+  overflow: hidden;    
+  max-height: 9rem;    
 }
 
 #chat-input:focus {
@@ -107,6 +109,31 @@ body {
 
 .message.from-bot {align-items: flex-start;}
 .message.from-user {align-items: flex-end;}
+
+.bubble {
+  padding: 0.7rem 0.9rem;
+  border-radius: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.from-bot .bubble {
+  background: #1f2937;
+  color: #eaeaea;
+  border-top-left-radius: 0.4rem;
+}
+
+.from-bot .bubble {
+  background: #2563eb;
+  color: #fff;
+  border-top-right-radius: 0.4rem;
+}
+
+.meta {
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+  color: #9aa4af;
+}
 
 /* Responsywność na małych ekranach */
 @media (max-width: 600px) {
